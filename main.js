@@ -1,9 +1,9 @@
 const WA_NUMBER = "918899166414";
 
 const WA_MESSAGES = {
-  "/": "Hello United Trips! I'm planning a Kashmir trip and found your website. Can you help me plan my itinerary?",
+  "/": "Hello United Arts & Crafts Holidays! I found your website and want to enquire about a Kashmir trip. Can you help me?",
   "/packages": "Hello! I'm browsing your Kashmir tour packages. Can you help me choose the right one?",
-  "/contact": "Hello United Trips! I'd like a free custom Kashmir itinerary quote."
+  "/contact": "Hello United Arts & Crafts Holidays! I'd like a free custom Kashmir itinerary quote."
 };
 
 function buildWhatsAppLink(message) {
@@ -174,6 +174,70 @@ function initYearStamp() {
   });
 }
 
+function initContactForm() {
+  const form = document.querySelector('form');
+  if (!form || window.location.pathname.indexOf('contact') === -1) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name')?.value || '';
+    const email = document.getElementById('email')?.value || '';
+    const phone = document.getElementById('phone')?.value || '';
+    const travellers = document.getElementById('travellers')?.value || '';
+    const dates = document.getElementById('dates')?.value || '';
+    const budget = document.getElementById('budget')?.value || '';
+    const interest = document.getElementById('interest')?.value || '';
+    const heard = document.getElementById('heard')?.value || '';
+    const message = document.getElementById('message')?.value || '';
+
+    const waMessage = `
+Hello United Arts & Crafts Holidays!
+
+I found your website and would like to enquire about a Kashmir trip.
+
+*My Details:*
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+No. of Travellers: ${travellers}
+Travel Dates: ${dates}
+Budget Range: ${budget}
+Interested In: ${interest}
+How I heard about you: ${heard}
+
+*Message / Special Requests:*
+${message}
+
+Please get back to me at your earliest convenience. Thank you!
+    `.trim();
+
+    const encodedMessage = encodeURIComponent(waMessage);
+    const waURL = `https://wa.me/${WA_NUMBER}?text=${encodedMessage}`;
+
+    window.open(waURL, '_blank', 'noopener,noreferrer');
+
+    form.innerHTML = `
+      <div style="text-align:center; padding:2rem;">
+        <div style="font-size:48px; margin-bottom:1rem;">✓</div>
+        <h3 style="font-family:inherit; margin-bottom:0.5rem;">
+          Opening WhatsApp...
+        </h3>
+        <p style="color:#5a6478; font-size:14px;">
+          Your enquiry details have been pre-filled in WhatsApp.
+          Just press Send and we will reply within 2 hours.
+        </p>
+        <p style="color:#5a6478; font-size:13px; margin-top:1rem;">
+          WhatsApp not opening?
+          <a href="${waURL}" style="color:#0e6b6b;">
+            Click here to open manually
+          </a>
+        </p>
+      </div>
+    `;
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initProgressBar();
   initNavbarState();
@@ -184,6 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initExitIntent();
   initBookingCalculator();
   initYearStamp();
+  initContactForm();
   setWhatsAppLinks();
 });
 
