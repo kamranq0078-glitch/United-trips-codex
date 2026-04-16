@@ -1383,4 +1383,36 @@ body[data-package-name] .tab-panel {
     grid-template-columns: 1fr !important;
     gap: 32px !important;
   }
+  }
+}
+
+/* --- FIX: MOBILE HEADER BRAND SCALING --- */
+@media (max-width: 480px) {
+  .brand-title {
+    font-size: 1.15rem;
+    letter-spacing: 0.1em;
+  }
+  .brand-sub {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+  }
+  .site-header .container {
+    min-height: 70px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-title {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+  .brand-sub {
+    font-size: 0.55rem;
+    letter-spacing: 0.05em;
+  }
+  .site-header .container {
+    min-height: 60px;
+  }
 }
