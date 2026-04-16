@@ -1,15 +1,15 @@
 const CACHE_NAME = "unitedtrips-v1";
 const STATIC_ASSETS = [
   "/",
-  "/packages.html",
-  "/destinations.html",
-  "/about.html",
-  "/services.html",
-  "/blog.html",
-  "/contact.html",
-  "/styles.css",
-  "/main.js",
-  "/manifest.json"
+  "packages.html",
+  "destinations.html",
+  "about.html",
+  "services.html",
+  "blog.html",
+  "contact.html",
+  "styles.css",
+  "main.js",
+  "manifest.json"
 ];
 
 self.addEventListener("install", (event) => {

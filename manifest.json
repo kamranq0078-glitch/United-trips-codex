@@ -2,7 +2,7 @@
   "name": "United Trips",
   "short_name": "United Trips",
   "description": "Kashmir tour packages, local travel planning, cab services, and custom itineraries from Srinagar.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#0B1420",
   "theme_color": "#0B1420",
