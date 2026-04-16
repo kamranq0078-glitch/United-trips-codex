@@ -46,16 +46,6 @@ function initProgressBar() {
   });
 }
 
-function initNavbarState() {
-  const nav = document.querySelector(".site-header");
-  if (!nav) return;
-  const update = () => {
-    nav.style.background = window.scrollY > 30 ? "rgba(11, 20, 32, 0.86)" : "rgba(11, 20, 32, 0.94)";
-  };
-  update();
-  window.addEventListener("scroll", update, { passive: true });
-}
-
 function initCounters() {
   const counters = document.querySelectorAll("[data-count]");
   if (!counters.length) return;
@@ -240,7 +230,6 @@ Please get back to me at your earliest convenience. Thank you!
 
 document.addEventListener("DOMContentLoaded", () => {
   initProgressBar();
-  initNavbarState();
   initCounters();
   initTabs();
   initPackageFilters();
