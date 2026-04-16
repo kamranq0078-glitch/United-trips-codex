@@ -561,6 +561,9 @@ p {
 .review-card,
 .service-card {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card-body,
@@ -570,6 +573,18 @@ p {
 .review-body,
 .service-body {
   padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-body > :last-child,
+.package-body > :last-child,
+.destination-body > :last-child,
+.blog-body > :last-child,
+.review-body > :last-child,
+.service-body > :last-child {
+  margin-top: auto;
 }
 
 .image-frame {
