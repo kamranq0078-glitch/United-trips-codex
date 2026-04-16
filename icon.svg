@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="United Trips icon">
+  <rect width="256" height="256" rx="48" fill="#0B1420"/>
+  <path d="M52 170L128 64l76 106" fill="none" stroke="#C9820A" stroke-linecap="round" stroke-linejoin="round" stroke-width="18"/>
+  <path d="M74 170h108" fill="none" stroke="#12A0A0" stroke-linecap="round" stroke-width="18"/>
+</svg>
