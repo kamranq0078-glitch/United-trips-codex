@@ -1,9 +1,9 @@
 const WA_NUMBER = "918899166414";
 
 const WA_MESSAGES = {
-  "/": "Hello United Arts & Crafts Holidays! I found your website and want to enquire about a Kashmir trip. Can you help me?",
+  "/": "Hello United Arts and Crafts Holiday! I found your website and want to enquire about a Kashmir trip. Can you help me?",
   "/packages": "Hello! I'm browsing your Kashmir tour packages. Can you help me choose the right one?",
-  "/contact": "Hello United Arts & Crafts Holidays! I'd like a free custom Kashmir itinerary quote."
+  "/contact": "Hello United Arts and Crafts Holiday! I'd like a free custom Kashmir itinerary quote."
 };
 
 function buildWhatsAppLink(message) {
@@ -182,7 +182,7 @@ function initContactForm() {
     const message = document.getElementById('message')?.value || '';
 
     const waMessage = `
-Hello United Arts & Crafts Holidays!
+Hello United Arts and Crafts Holiday!
 
 I found your website and would like to enquire about a Kashmir trip.
 

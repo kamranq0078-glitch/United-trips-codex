@@ -21,6 +21,20 @@
   --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-body: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --holiday-highlight: #c9820a; /* Saffron Gold */
+}
+
+.highlight-holiday {
+  color: var(--holiday-highlight);
+  font-weight: inherit;
+  font-style: italic;
+  display: inline;
+}
+
+.brand-title .highlight-holiday {
+  font-style: normal;
+  color: var(--saffron-gold);
+  border-bottom: 2px solid var(--saffron-gold);
 }
 
 *,
