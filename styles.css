@@ -1412,7 +1412,6 @@ body[data-package-name] .tab-panel {
     grid-template-columns: 1fr !important;
     gap: 32px !important;
   }
-  }
 }
 
 /* --- FIX: MOBILE HEADER BRAND SCALING --- */
