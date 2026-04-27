@@ -19,7 +19,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./public/
+          local-dir: /domains/unitedtrips.in/public_html/ 
           server-dir: /domains/unitedtrips.in/public_html/  # Update this if you want to target a subfolder on Hostinger
           # Exclude the .github folder (GitHub workflow)
           exclude: |
