@@ -1,4 +1,4 @@
-const CACHE_NAME = "unitedtrips-v1";
+const CACHE_NAME = "unitedtrips-2026-04-27-1714204800";
 const STATIC_ASSETS = [
   "/",
   "packages.html",
